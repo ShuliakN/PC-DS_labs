@@ -1,0 +1,40 @@
+###
+@flightId=8b8f5b1c-69ef-4738-8a28-ad025ab22227
+
+###
+POST http://localhost:8080/api/flights
+Content-Type: application/json
+
+{
+  "origin": "Kyiv",
+  "destination": "Berlin",
+  "date": "2025-05-10",
+  "basePrice": 50.0,
+  "totalSeats": 100
+}
+
+###
+GET http://localhost:8080/api/flights
+
+###
+POST http://localhost:8080/api/bookings
+Content-Type: application/json
+
+{
+  "flightId": "{{flightId}}",
+  "withBaggage": false,
+  "withPriority": false
+}
+
+###
+POST http://localhost:8080/api/bookings
+Content-Type: application/json
+
+{
+  "flightId": "{{flightId}}",
+  "withBaggage": true,
+  "withPriority": true
+}
+
+###
+GET http://localhost:8080/api/bookings
