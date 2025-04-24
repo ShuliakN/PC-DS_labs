@@ -1,0 +1,5 @@
+perfectNumber:
+  parallelism:
+    cpuUsagePercent: 0.50
+    enabled: true
+  limit: 5
