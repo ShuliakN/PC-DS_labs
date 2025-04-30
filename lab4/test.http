@@ -5,13 +5,15 @@ Content-Type: application/json
 {
   "origin": "Kyiv",
   "destination": "Berlin",
-  "date": "2025-05-10",
+  "date": "2025-05-10T00:00:00Z",
   "basePrice": 100.0,
   "totalSeats": 100
 }
 
 ###
 GET http://localhost:8081/api/flights
+###
+GET http://localhost:8081/api/flights/250433fd-94ac-4729-9ced-95c585148db3
 
 ###
 POST http://localhost:8082/api/bookings
