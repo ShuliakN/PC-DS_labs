@@ -1,0 +1,29 @@
+###
+POST http://localhost:8081/api/flights
+Content-Type: application/json
+
+{
+  "origin": "Kyiv",
+  "destination": "Berlin",
+  "date": "2025-05-10T00:00:00Z",
+  "basePrice": 100.0,
+  "totalSeats": 100
+}
+
+###
+GET http://localhost:8081/api/flights
+###
+GET http://localhost:8081/api/flights/250433fd-94ac-4729-9ced-95c585148db3
+
+###
+POST http://localhost:8082/api/bookings
+Content-Type: application/json
+
+{
+  "flightId": "a12a9e09-9b76-4758-8aa2-5023cdcf6d17",
+  "withBaggage": true,
+  "withPriority": false
+}
+
+###
+GET http://localhost:8082/api/bookings
